@@ -2,6 +2,7 @@
 <html class="v2" dir="ltr" lang="vi" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
 
 <head>
+    <meta charset="UTF-8">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/e081c0a6dd.js"></script>
     <title>Nguyễn Trí Minh</title>
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
@@ -488,6 +489,7 @@ Nhận Chơi Chung Mọi Loại Game
 </head>-->
     <audio src="https://files.catbox.moe/2lp28w.mp3"></audio>
     <style>
+
         body {
             display: block;
             -khtml-user-select: none;
@@ -664,6 +666,65 @@ Nhận Chơi Chung Mọi Loại Game
             changeSong();
         };
     </script>
+<style>
+    #music-confirm {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0.85); /* Làm tối nền để nổi bật pop-up */
+        display: flex; align-items: center; justify-content: center;
+        z-index: 99999; /* Đảm bảo hiện lên trên cùng */
+        backdrop-filter: blur(5px); /* Làm mờ nền phía sau cho xịn */
+    }
+    .confirm-box {
+        background: white; padding: 30px; border-radius: 25px;
+        text-align: center; width: 300px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        animation: popUpAnim 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    @keyframes popUpAnim {
+        from { transform: scale(0.7); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+    .confirm-box p {
+        margin: 0 0 20px 0; font-weight: 700; color: #333; font-size: 18px; line-height: 1.4;
+    }
+    .btn-group { display: flex; gap: 10px; justify-content: center; }
+    .confirm-btn {
+        padding: 12px 25px; border: none; border-radius: 12px;
+        font-weight: 700; cursor: pointer; transition: 0.2s; font-size: 15px;
+    }
+    .btn-yes { background: #ef9d64; color: white; flex: 1; }
+    .btn-no { background: #f0f0f0; color: #888; flex: 1; }
+    .btn-yes:active { transform: scale(0.95); background: #d88a52; }
+</style>
+
+<div id="music-confirm">
+    <div class="confirm-box">
+        <p>🎵 Bạn có muốn nghe nhạc Chill khi xem Profile không?</p>
+        <div class="btn-group">
+            <button class="confirm-btn btn-yes" onclick="startMusic(true)">Nghe luôn</button>
+            <button class="confirm-btn btn-no" onclick="startMusic(false)">Thôi nha</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function startMusic(play) {
+        const popup = document.getElementById('music-confirm');
+        popup.style.display = 'none'; // Ẩn pop-up
+        
+        if (play) {
+            // Gọi hàm changeSong đã có sẵn trong code gốc của bạn
+            if (typeof changeSong === "function") {
+                changeSong();
+            } else {
+                // Nếu chưa có hàm, dùng lệnh này để chạy nhạc
+                var audio = document.getElementById('audioPlayer');
+                if(audio) audio.play();
+            }
+        }
+    }
+</script>
+
 </body>
 </<html>
    
