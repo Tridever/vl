@@ -702,8 +702,12 @@ Chỉ Bán Hàng Auth
         <p>🎵 Bạn có muốn nghe nhạc Chill khi xem Profile không?</p>
         <div class="btn-group">
             <button class="confirm-btn btn-yes" onclick="startMusic(true)">Nghe luôn</button>
-            
-            <script>
+            <button class="confirm-btn btn-no" onclick="startMusic(false)">Thôi nha</button>
+        </div>
+    </div>
+</div>
+
+<script>
     function startMusic(play) {
         const popup = document.getElementById('music-confirm');
         popup.style.display = 'none'; // Ẩn pop-up
@@ -716,13 +720,6 @@ Chỉ Bán Hàng Auth
                 // Nếu chưa có hàm, dùng lệnh này để chạy nhạc
                 var audio = document.getElementById('audioPlayer');
                 if(audio) audio.play();
-
-            <button class="confirm-btn btn-no" onclick="startMusic(false)">Thôi nha</button>
-        </div>
-    </div>
-</div>
-
-
             }
         }
     }
