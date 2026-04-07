@@ -1,660 +1,213 @@
 <!DOCTYPE html>
-<html class="v2" dir="ltr" lang="vi" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+<html class="v2" dir="ltr" lang="vi" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/e081c0a6dd.js"></script>
     <title>𝑵𝒈𝒖𝒚𝒆̂̃𝒏 𝑻𝒉𝒊̣ 𝑳𝒂𝒏 𝑨𝒏𝒉</title>
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
-    <link href="#" rel="shortcut icon" type="image/x-icon">
-    <meta content="#" property="og:image">
-    <meta content="https://github.com/Tridever/NTM.git/" property="og:url">
-    <meta content="website" property="og:type">
-    <meta content="𝑵𝒈𝒖𝒚𝒆̂̃𝒏 𝑻𝒉𝒊̣ 𝑳𝒂𝒏 𝑨𝒏𝒉" property="og:title">
     <meta content="Chuyên Bán Hàng Auth" property="og:description">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/gh/leanhducprovn/cdn/font-awesome/pro-5.15.3/css/all.css" rel="stylesheet">
-    <!-- Bắt đầu css-->
+    
     <style id="page-skin-1" type="text/css">
-        <!--
-        /* Chèn CSS vào đây */
-        /*------------------------------------------------*/
-        /* Name: Nguyễn Thị Lan Anh */
-        /* Admin: NTM                        */
-        /* Zalo: 0363665265                             */
-        /* Gmail: Voanh8649@gmail.com       */
-        /* Website: https://github.com/Tridever/NTM.git         */
-        /*------------------------------------------------*/
-
-        html,
-        body {
+        html, body {
             cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
-        }
-
-        a:hover {
-            cursor: url("https://i.imgur.com/IXULuQ1.png"), auto;
-        }
-
-        html,
-        body {
             overflow-x: hidden;
-            background-image: url('https://imgur.com/gDC82fW.gif');
+            background-image: url('https://i.imgur.com/gDC82fW.gif');
             background-repeat: no-repeat;
             background-size: cover;
-            font-family: inter, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-attachment: fixed;
+            font-family: 'Roboto', sans-serif;
+            margin: 0; padding: 0;
         }
 
-        body {
-            margin: 0;
-            padding: 0;
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100vw;
-        }
+        a:hover { cursor: url("https://i.imgur.com/IXULuQ1.png"), auto; }
 
-        .center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .light-orange {
-            color: #ef9d64;
-        }
-
-        .light-blue {
-            color: #6a8de4;
-        }
-
-        #root {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-            min-height: 100vh;
-        }
+        #root { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
 
         #main {
-            display: block;
-            position: relative;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            width: 411px;
-            max-width: 411px;
-            min-height: 82px;
-            background-color: #fff;
-            border-radius: 30px;
-            box-shadow: 7px 7px 20px -5px rgba(0, 0, 0, .1);
+            display: block; position: relative; margin: 30px auto;
+            width: 411px; max-width: 95%; background-color: #fff;
+            border-radius: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
-        .container {
-            padding: 0 15px;
-        }
+        .container { padding: 0 15px 20px 15px; }
 
         #cover-image {
-            background-position: center;
-            background-size: cover;
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-            width: 411px;
-            height: 165px;
-            position: relative;
-            left: -15px;
+            background-position: center; background-size: cover;
+            width: 100%; height: 165px;
         }
 
         #profile-header {
-            position: relative;
-            display: grid;
-            grid-template-columns: 120px auto;
-            column-gap: 15px;
-            margin-bottom: -10px;
+            display: grid; grid-template-columns: 120px auto;
+            column-gap: 15px; margin-top: -25px;
         }
 
         #avatar-image {
-            position: relative;
-            background-position: center;
-            background-size: cover;
-            border-radius: 30px;
-            width: 120px;
-            height: 120px;
-            top: -25px;
+            background-position: center; background-size: cover;
+            border-radius: 30px; width: 120px; height: 120px;
+            border: 4px solid #fff;
         }
 
-        #name {
-            position: relative;
-            padding-top: 5px;
-        }
-
-        .names {
-            font-weight: 600;
-            font-size: 24px;
-            margin: 0;
-        }
-
-        .nicknames {
-            font-weight: 500;
-            font-size: 20px;
-            margin: 0;
-        }
-
-        #skills {
-            padding-top: 5px;
-            margin-left: 5px;
-        }
-
+        #name { padding-top: 30px; }
+        .names { font-weight: 600; font-size: 20px; margin: 0; }
+        
         .skill-item {
-            display: inline-flex;
-            justify-content: center;
-            align-content: center;
-            position: relative;
-            font-size: 14px;
-            font-weight: 400;
-            height: 20px;
-            margin-right: 10px;
-            width: auto;
+            display: inline-block; font-size: 11px; font-weight: 600;
+            padding: 2px 8px; margin: 5px 2px 0 0;
+            background: rgba(0,0,0,0.05); border-radius: 5px;
         }
 
-        .skill-item::before {
-            position: absolute;
-            content: "";
-            padding-left: 5px;
-            padding-right: 5px;
-            width: 100%;
-            height: 18px;
-            background-color: currentColor;
-            opacity: .2;
-            border-radius: 5px;
-        }
-
-        .bio-story {
-            position: relative;
-            display: grid;
-            grid-template-columns: 70px auto;
-            height: 70px;
-            width: 100%;
-            background-color: #fafafa;
-            border-radius: 20px;
-            -webkit-box-shadow: 7px 7px 20px -5px rgba(0, 0, 0, .4);
-            box-shadow: 7px 7px 20px -5px rgba(0, 0, 0, .1);
-            margin-bottom: 15px;
-        }
-
-        .bio-story-thumb {
-            width: 50px;
-            height: 50px;
-            background-position: center;
-            background-size: cover;
-            border-radius: 15px;
-            margin: 10px;
-        }
-
-        .bio-story-content p {
-            position: relative;
-            font-size: 15px;
-            margin-top: 10px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .bio-story-content span {
-            position: relative;
-            font-size: 12px;
-            bottom: 15px;
-            color: #587fe1;
-            font-weight: 500;
-        }
-
-        #content-body {
-            position: relative;
-            margin-top: 20px;
-            max-width: 100%;
-        }
-
-        .drop-title {
-            font-weight: 600;
-            font-size: 18px;
-            margin-left: 10px;
-        }
-
-        #link-box {
-            position: relative;
-            width: 100%;
-        }
+        #content-body { margin-top: 25px; }
+        .drop-title { font-weight: 600; font-size: 18px; margin-bottom: 15px; }
 
         .link-item {
-            position: relative;
-            display: grid;
-            grid-template-columns: 70px auto 65px;
-            height: 70px;
-            width: 100%;
-            background-color: #fafafa;
-            border-radius: 20px;
-            margin-bottom: 15px;
-            -webkit-box-shadow: 7px 7px 20px -5px rgba(0, 0, 0, .4);
-            box-shadow: 7px 7px 20px -5px rgba(0, 0, 0, .1);
-            transition: all 250ms ease-in-out;
+            display: grid; grid-template-columns: 60px auto 70px;
+            align-items: center; height: 70px; background-color: #fafafa;
+            border-radius: 20px; margin-bottom: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
 
-        .link-item:hover {
-            background-color: #dff9fb;
+        .link-item:hover { background-color: #f0f7ff; transform: translateY(-2px); }
+
+        .bio-story-thumb {
+            width: 45px; height: 45px; margin: 0 auto;
+            background-size: cover; border-radius: 12px;
         }
 
-        .link-content {
-            padding-top: 15px;
-        }
-
-        .link-content p {
-            margin: 0;
-            font-weight: 600;
-        }
-
-        .link-content span {
-            position: absolute;
-            font-weight: 400;
-            font-size: 14px;
-            bottom: 15px;
-            color: #a6a9b1;
-            max-width: 50%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            transition: all 250ms;
-            cursor: pointer;
-        }
-
-        .link-content span:hover {
-            color: #7c7e83;
-        }
+        .link-content p { margin: 0; font-weight: 600; font-size: 15px; }
+        .link-content span { font-size: 13px; color: #888; cursor: pointer; }
 
         .link-btn-chill {
-            display: inline-flex;
-            justify-content: center;
-            align-content: center;
-            position: relative;
-            margin-top: 15px;
-            font-size: 14px;
-            width: auto;
-            font-weight: 600;
+            font-weight: 700; font-size: 13px; cursor: pointer;
+            text-align: center; color: #ef9d64;
         }
 
-        .link-btn-chill::before {
-            position: absolute;
-            content: "";
-            padding-left: 7px;
-            padding-right: 7px;
-            width: 40px;
-            height: 18px;
-            background-color: currentColor;
-            opacity: .2;
-            border-radius: 5px;
-            top: -1px;
-            transition: all 250ms;
+        /* Snowflake Effect */
+        .snowflake { position: fixed; top: -10%; z-index: 9999; user-select: none; }
+        
+        #music-confirm {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); display: flex; align-items: center; 
+            justify-content: center; z-index: 100000; backdrop-filter: blur(5px);
         }
-
-        .link-btn-chill {
-            transition: all 250ms ease-in-out;
+        .confirm-box {
+            background: white; padding: 30px; border-radius: 25px;
+            text-align: center; width: 280px;
         }
+        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
+        .confirm-btn { flex: 1; padding: 12px; border: none; border-radius: 12px; cursor: pointer; font-weight: 700; }
+        .btn-yes { background: #ef9d64; color: white; }
+        .btn-no { background: #eee; }
 
-        .link-btn-chill:hover::before {
-            opacity: .5;
-        }
-
-        @media only screen and (max-width:425px) {
-            #root {
-                display: block;
-            }
-            #main {
-                top: 0;
-                left: 0;
-                border-radius: 0;
-                width: 100%;
-                margin: 0;
-                margin-right: 0;
-            }
-            #cover-image {
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                max-width: 100vw;
-            }
-            .container {
-                width: 90%;
-            }
-        }
-
-        @media only screen and (max-width:350px) and (min-width:150px) {
-            #name,
-            #first-name {
-                font-size: 22px
-            }
-            #nickname {
-                font-size: 16px
-            }
-            .skill-item {
-                font-size: 12px
-            }
-        }
-
-        #snowflakeContainer {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-        }
-
-        .snowflake {
-            padding-left: 15px;
-            font-size: 14px;
-            line-height: 24px;
-            position: fixed;
-            color: #ebebeb;
-            user-select: none;
-            z-index: 1000;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -webkit-touch-callout: none;
-        }
-
-        .snowflake:hover {
-            cursor: default
-        }
-
-        .codepro-tet-left {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999
-        }
-
-        .codepro-tet-right {
-            position: fixed;
-            top: 0;
-            right: 0;
-            z-index: 9999
-        }
-
-        @media(max-width:1024px) {
-            .codepro-tet-left,
-            .codepro-tet-right {
-                display: none!important
-            }
-        }
-
-        -->
+        audio { display: none; }
     </style>
 </head>
-<!-- Bắt đầu phần hiển thị -->
 
 <body>
+
+    <div id="music-confirm">
+        <div class="confirm-box">
+            <p>🎵 Nghe nhạc Chill khi xem Profile Lan Anh nhé?</p>
+            <div class="btn-group">
+                <button class="confirm-btn btn-yes" onclick="startMusic(true)">Nghe luôn</button>
+                <button class="confirm-btn btn-no" onclick="startMusic(false)">Thôi ạ</button>
+            </div>
+        </div>
+    </div>
+
     <div id="root">
         <div id="main">
+            <div id="cover-image" style="background-image: url('https://i.imgur.com/vHq4R7L.jpg');"></div>
+            
             <div class="container">
                 <header>
-                    <div id="cover-image" style="background-image: url(&#x27;https://scontent.fhan2-2.fna.fbcdn.net/v/t39.30808-6/240672749_559066065239957_8541018128951660470_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=rxL5nR-UZXAAX8QECxd&_nc_ht=scontent.fhan2-2.fna&oh=00_AT8lvqSx7RMBywZOKVVjKYztcToZHXE9-P0XeZBT88tpXw&oe=61EF665A&#x27;);"></div>
                     <div id="profile-header">
-                        <div id="avatar-image" style="background-image: url(&#x27;https://ibb.co/ksQ1xwsG?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=lvz9ZQqE28wAX_tyVZf&_nc_ht=scontent.fhan2-4.fna&oh=00_AT-e0GefNpnO5_XEzaaVfp6YRQ_iFm8BYymgtp1SNey_wg&oe=61F01079&#x27;);"></div>
+                        <div id="avatar-image" style="background-image: url('https://i.imgur.com/8pw9fS9.png');"></div>
                         <div id="name">
-                            <p class="names" id="first-name">𝑵𝒈𝒖𝒚𝒆̂̃𝒏 𝑻𝒉𝒊̣ 𝑳𝒂𝒏 𝑨𝒏𝒉<i class="fas fa-check-circle" style="color:#2d88ff" title="Đã xác minh"></i></p><br>
-Chỉ Bán Hàng Auth                        
+                            <p class="names">𝑵𝒈𝒖𝒚𝒆̂̃𝒏 𝑻𝒉𝒊̣ 𝑳𝒂𝒏 𝑨𝒏𝒉 <i class="fas fa-check-circle" style="color:#2d88ff"></i></p>
+                            <span style="font-size: 13px; color: #666;">Chỉ Bán Hàng Auth</span>
                             <div id="skills">
                                 <div class="skill-item" style="color:#740A4E;">Hot</div>
                                 <div class="skill-item" style="color:#ff758f;">Auth</div>
-                                <div class="skill-item" style="color:#85D18A;">Reputation</div>
-                                <div class="skill-item" style="color:#F27935;">Skincare&Makeup</div>
+                                <div class="skill-item" style="color:#F27935;">Skincare</div>
                             </div>
                         </div>
                     </div>
                 </header>
+
                 <div id="content-body">
-                    <p class="drop-title"><b>Thông Tin Liên Hệ</b></p>
+                    <p class="drop-title">Thông Tin Liên Hệ</p>
+                    
                     <div id="link-box">
-                        <div class="link-item">
-                            <div class="bio-story-thumb" style="background-image: url(&#x27;https://imgur.com/q8qqsAy.jpg&#x27;);"></div>
+                        <div class="link-item" onclick="window.open('https://www.facebook.com/lananh.nguyenthi.92102', '_blank')">
+                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/q8qqsAy.png');"></div>
                             <div class="link-content">
                                 <p>Facebook</p>
-                                <span onclick="window.open(&#39;https://www.facebook.com/lananh.nguyenthi.92102;, &#39;_blank&#39;)">ɴɢᴜʏᴇ̂̃ɴ ᴛʜɪ̣ ʟᴀɴ ᴀɴʜ</span>
+                                <span>ɴɢᴜʏᴇ̂̃ɴ ᴛʜɪ̣ ʟᴀɴ ᴀɴʜ</span>
                             </div>
-                            <div class="link-btn">
-                                <div class="link-btn-chill light-orange" onclick="window.open(&#39;https://www.facebook.com/lananh.nguyenthi.92102&#39;, &#39;_blank&#39;)">OPEN</div>
-                            </div>
+                            <div class="link-btn-chill">OPEN</div>
                         </div>
-                        <div class="link-item">
-                            <div class="bio-story-thumb" style="background-image: url(&#x27;https://imgur.com/1G4kS7D.jpg&#x27;);"></div>
+
+                        <div class="link-item" onclick="window.open('https://www.instagram.com/nguyenananhtu', '_blank')">
+                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/1G4kS7D.png');"></div>
                             <div class="link-content">
                                 <p>Instagram</p>
-                                <span onclick="window.open(&#39;
-                                    #39;_blank&#39;)">ɴɢᴜʏᴇ̂̃ɴ ᴛʜɪ̣ ʟᴀɴ ᴀɴʜ</span>
+                                <span>lananh.auth</span>
                             </div>
-                            <div class="link-btn">
-                                <div class="link-btn-chill light-orange" onclick="window.open(&#39;https://www.instagram.com/nguyenananhtu?igsh=Z3doOTJnZ2xmM3h2&utm_source=qr&#39;, &#39;_blank&#39;)">OPEN</div>
-                            </div>
+                            <div class="link-btn-chill">OPEN</div>
                         </div>
-                        <div class="link-item">
-                            <div class="bio-story-thumb" style="background-image: url(&#x27;https://i.imgur.com/8eN7qqF.jpg&#x27;);"></div>
+
+                        <div class="link-item" onclick="window.open('https://zalo.me/0363665265', '_blank')">
+                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/8eN7qqF.png');"></div>
                             <div class="link-content">
                                 <p>Zalo</p>
-                                <span onclick="window.open(&#39;https://zalo.me/0375703794&#39;, &#39;_blank&#39;)">ɴɢᴜʏᴇ̂̃ɴ ᴛʜɪ̣ ʟᴀɴ ᴀɴʜ</span>
+                                <span>0363.665.265</span>
                             </div>
-                            <div class="link-btn">
-                                <div class="link-btn-chill light-orange" onclick="window.open(&#39;https://zalo.me/0363665265&#39;, &#39;_blank&#39;)">OPEN</div>
-                            </div>
+                            <div class="link-btn-chill">OPEN</div>
                         </div>
+
                         <div class="link-item">
-                            <div class="bio-story-thumb" style="background-image: url(&#x27;https://imgur.com/Y1axNQZ.jpg&#x27;);"></div>
-                            <div class="link-content">
-                                <p>Youtube</p>
-                                <span onclick="window.open(&#39;https:https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fp%2FCh%25E1%25BA%25BF-%25E1%25BA%25A3nh-meme-100071427470547%2F&psig=AOvVaw3e4mqhVf7cVV_20tHkP0Aa&ust=1720520710550000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNj33qmdl4cDFQAAAAAdAAAAABAE&#39;, &#39;_blank&#39;)">ɴɢᴜʏᴇ̂̃ɴ ᴛʜɪ̣ ʟᴀɴ ᴀɴʜ</span>
-                            </div>
-                            <div class="link-btn">
-                                <div class="link-btn-chill light-orange" onclick="window.open(&#39;https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fp%2FCh%25E1%25BA%25BF-%25E1%25BA%25A3nh-meme-100071427470547%2F&psig=AOvVaw3e4mqhVf7cVV_20tHkP0Aa&ust=1720520710550000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNj33qmdl4cDFQAAAAAdAAAAABAE&#39;, &#39;_blank&#39;)">OPEN</div>
-                            </div>
-                        </div>
-                        <div class="link-item">
-                            <div class="bio-story-thumb" style="background-image: url(&#x27;https://i.imgur.com/k1Qbqxg.jpg&#x27;);"></div>
+                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/k1Qbqxg.png');"></div>
                             <div class="link-content">
                                 <p>Gmail</p>
-                                <span onclick="geturl(&#39;Lananh1610vfu@mail.com&#39;)"Lananh1610vfu@mail.com</span>
+                                <span onclick="geturl('Lananh1610vfu@mail.com')">Lananh1610vfu@mail.com</span>
                             </div>
-                            <div class="link-btn">
-                                <div class="link-btn-chill light-blue" onclick="geturl(&#39;Lananh1610vfu@mail.com&#39;)">COPY</div>
-                            </div>
+                            <div class="link-btn-chill" style="color: #6a8de4;" onclick="geturl('Lananh1610vfu@mail.com')">COPY</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <audio id="audioPlayer" loop>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        // Hàm copy
         function geturl(giatri) {
             var $temp = $("<input>");
             $("body").append($temp);
             $temp.val(giatri).select();
             document.execCommand("copy");
             $temp.remove();
-            alert("Copy thành công!");
-        }
-    </script>
-    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-    <div class="no-items section" id="nhd-8827.blogspot.com"></div>
-    <!--<head>
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
-
-</head>-->
-    <audio src="https://files.catbox.moe/2lp28w.mp3"></audio>
-    <style>
-
-        body {
-            display: block;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -o-user-select: none;
-            user-select: none;
-            unselectable: on;
-        }
-    </style>
-    <style>
-        #snowflakeContainer {
-            position: absolute;
-            left: 0px;
-            top: 0px;
+            alert("Đã copy địa chỉ Email!");
         }
 
-        .snowflake {
-            padding-left: 15px;
-            font-size: 14px;
-            line-height: 24px;
-            position: fixed;
-            color: #ebebeb;
-            user-select: none;
-            z-index: 1000;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -webkit-touch-callout: none;
-        }
-
-        .snowflake:hover {
-            cursor: default
-        }
-    </style>
-    <script type="text/javascript">
-        //<![CDATA[
-        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-        var transforms = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"];
-        var transformProperty = getSupportedPropertyName(transforms);
-        var snowflakes = [];
-        var browserWidth;
-        var browserHeight;
-        var numberOfSnowflakes = 39;
-        var resetPosition = false;
-
-        function setup() {
-            window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
-            window.addEventListener("resize", setResetFlag, false)
-        }
-        setup();
-
-        function getSupportedPropertyName(b) {
-            for (var a = 0; a < b.length; a++) {
-                if (typeof document.body.style[b[a]] != "undefined") {
-                    return b[a]
-                }
-            }
-            return null
-        }
-
-        function Snowflake(b, a, d, e, c) {
-            this.element = b;
-            this.radius = a;
-            this.speed = d;
-            this.xPos = e;
-            this.yPos = c;
-            this.counter = 0;
-            this.sign = Math.random() < 0.5 ? 1 : -1;
-            this.element.style.opacity = 0.5 + Math.random();
-            this.element.style.fontSize = 4 + Math.random() * 30 + "px"
-        }
-        Snowflake.prototype.update = function() {
-            this.counter += this.speed / 5000;
-            this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
-            this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
-            setTranslate3DTransform(this.element, Math.round(this.xPos), Math.round(this.yPos));
-            if (this.yPos > browserHeight) {
-                this.yPos = -50
-            }
-        };
-
-        function setTranslate3DTransform(a, c, b) {
-            var d = "translate3d(" + c + "px, " + b + "px, 0)";
-            a.style[transformProperty] = d
-        }
-
-        function generateSnowflakes() {
-            var b = document.querySelector(".snowflake");
-            var h = b.parentNode;
-            browserWidth = document.documentElement.clientWidth;
-            browserHeight = document.documentElement.clientHeight;
-            for (var d = 0; d < numberOfSnowflakes; d++) {
-                var j = b.cloneNode(true);
-                h.appendChild(j);
-                var e = getPosition(50, browserWidth);
-                var a = getPosition(50, browserHeight);
-                var c = 5 + Math.random() * 40;
-                var g = 4 + Math.random() * 10;
-                var f = new Snowflake(j, g, c, e, a);
-                snowflakes.push(f)
-            }
-            h.removeChild(b);
-            moveSnowflakes()
-        }
-
-        function moveSnowflakes() {
-            for (var b = 0; b < snowflakes.length; b++) {
-                var a = snowflakes[b];
-                a.update()
-            }
-            if (resetPosition) {
-                browserWidth = document.documentElement.clientWidth;
-                browserHeight = document.documentElement.clientHeight;
-                for (var b = 0; b < snowflakes.length; b++) {
-                    var a = snowflakes[b];
-                    a.xPos = getPosition(50, browserWidth);
-                    a.yPos = getPosition(50, browserHeight)
-                }
-                resetPosition = false
-            }
-            requestAnimationFrame(moveSnowflakes)
-        }
-
-        function getPosition(b, a) {
-            return Math.round(-1 * b + Math.random() * (a + 2 * b))
-        }
-
-        function setResetFlag(a) {
-            resetPosition = true
-        };
-        //]]>
-    </script>
-    <div id="snowflakeContainer">
-        <p class="snowflake"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEiGwiKY4UEVHwcigi0lLQ6z43PYHoscMVaIsV2umnXlIP3UFgD_zsvkAZ5xY5BihQzm8mWSlB1oWkPFetYgv0Hs7MPwLTduLS2afd_NQyxja4Bjp8XMP7lPR4fDgZ38asrlHRwtywb3nW5RlSECQpi7DnpkrrqH0WrUB_hHRYMbinqR9p2qpgbBusqZxA=s320"
-                style="width:35px"></p>
-    </div>
-    <!--<body>
-</body>-->
-    <audio controls autoplay loop id="audioPlayer">
-        <source id="audioSource" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <button onclick="changeSong()">Chuyển bài hát</button>
-
-    <script>
+        // Nhạc
+        var songs = [
+            'https://files.catbox.moe/eqqdvx.mp3',
+            'https://files.catbox.moe/8g3pyw.mp3',
+            'https://files.catbox.moe/dwy88x.mp3'
+        ];
         var audioPlayer = document.getElementById('audioPlayer');
-        var songs = ['https://files.catbox.moe/eqqdvx.mp3',
-'https://files.catbox.moe/8g3pyw.mp3',
-'https://files.catbox.moe/dwy88x.mp3',
-'https://files.catbox.moe/ogh6es.mp3',
-'https://files.catbox.moe/tq7c6n.mp3',
-'https://files.catbox.moe/udwa85.mp3',
-'https://files.catbox.moe/9racy9.mp3',
-'https://files.catbox.moe/4d30vk.mp3',
-'https://files.catbox.moe/772a4y.mp3',
-'https://files.catbox.moe/x3mlgd.mp3',
-'https://files.catbox.moe/ugpt27.mp3',
-'https://files.catbox.moe/lyueul.mp3',
-'https://files.catbox.moe/nhapcg.mp3',
-'https://files.catbox.moe/fu4xbc.mp3'
-];
 
         function changeSong() {
             var randomIndex = Math.floor(Math.random() * songs.length);
@@ -662,71 +215,33 @@ Chỉ Bán Hàng Auth
             audioPlayer.play();
         }
 
-        window.onload = function() {
-            changeSong();
-        };
-    </script>
-<style>
-    #music-confirm {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        background: rgba(0,0,0,0.85); /* Làm tối nền để nổi bật pop-up */
-        display: flex; align-items: center; justify-content: center;
-        z-index: 99999; /* Đảm bảo hiện lên trên cùng */
-        backdrop-filter: blur(5px); /* Làm mờ nền phía sau cho xịn */
-    }
-    .confirm-box {
-        background: white; padding: 30px; border-radius: 25px;
-        text-align: center; width: 300px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-        animation: popUpAnim 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    @keyframes popUpAnim {
-        from { transform: scale(0.7); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
-    .confirm-box p {
-        margin: 0 0 20px 0; font-weight: 700; color: #333; font-size: 18px; line-height: 1.4;
-    }
-    .btn-group { display: flex; gap: 10px; justify-content: center; }
-    .confirm-btn {
-        padding: 12px 25px; border: none; border-radius: 12px;
-        font-weight: 700; cursor: pointer; transition: 0.2s; font-size: 15px;
-    }
-    .btn-yes { background: #ef9d64; color: white; flex: 1; }
-    .btn-no { background: #f0f0f0; color: #888; flex: 1; }
-    .btn-yes:active { transform: scale(0.95); background: #d88a52; }
-</style>
-
-<div id="music-confirm">
-    <div class="confirm-box">
-        <p>🎵 Bạn có muốn nghe nhạc Chill khi xem Profile không?</p>
-        <div class="btn-group">
-            <button class="confirm-btn btn-yes" onclick="startMusic(true)">Nghe luôn</button>
-            <button class="confirm-btn btn-no" onclick="startMusic(false)">Thôi nha</button>
-        </div>
-    </div>
-</div>
-
-<script>
-    function startMusic(play) {
-        const popup = document.getElementById('music-confirm');
-        popup.style.display = 'none'; // Ẩn pop-up
-        
-        if (play) {
-            // Gọi hàm changeSong đã có sẵn trong code gốc của bạn
-            if (typeof changeSong === "function") {
-                changeSong();
-            } else {
-                // Nếu chưa có hàm, dùng lệnh này để chạy nhạc
-                var audio = document.getElementById('audioPlayer');
-                if(audio) audio.play();
-            }
+        function startMusic(play) {
+            document.getElementById('music-confirm').style.display = 'none';
+            if (play) changeSong();
         }
-    }
-</script>
 
+        // Hiệu ứng tuyết rơi đơn giản
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.innerHTML = "❄";
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.color = "#fff";
+            document.body.appendChild(snowflake);
+            
+            let pos = -10;
+            const timer = setInterval(() => {
+                pos += 2;
+                snowflake.style.top = pos + 'px';
+                if (pos > window.innerHeight) {
+                    clearInterval(timer);
+                    snowflake.remove();
+                }
+            }, 20);
+        }
+        setInterval(createSnowflake, 300);
+    </script>
 </body>
-</<html>
-   
 </html>
->
