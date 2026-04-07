@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html class="v2" dir="ltr" lang="vi" xmlns="http://www.w3.org/1999/xhtml">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <script crossorigin="anonymous" src="https://kit.fontawesome.com/e081c0a6dd.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>𝑵𝒈𝒖𝒚𝒆̂̃𝒏 𝑻𝒉𝒊̣ 𝑳𝒂𝒏 𝑨𝒏𝒉</title>
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
-    <meta content="Chuyên Bán Hàng Auth" property="og:description">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/gh/leanhducprovn/cdn/font-awesome/pro-5.15.3/css/all.css" rel="stylesheet">
     
-    <style id="page-skin-1" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/leanhducprovn/cdn/font-awesome/pro-5.15.3/css/all.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/e081c0a6dd.js"></script>
+
+    <style>
+        /* --- Giao diện chung --- */
         html, body {
+            margin: 0; padding: 0;
             cursor: url("https://i.imgur.com/5v5M8gh.png"), auto;
             overflow-x: hidden;
             background-image: url('https://i.imgur.com/gDC82fW.gif');
@@ -20,99 +20,97 @@
             background-size: cover;
             background-attachment: fixed;
             font-family: 'Roboto', sans-serif;
-            margin: 0; padding: 0;
         }
 
-        a:hover { cursor: url("https://i.imgur.com/IXULuQ1.png"), auto; }
-
-        #root { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        #root {
+            display: flex; align-items: center; justify-content: center;
+            min-height: 100vh; padding: 20px 0;
+        }
 
         #main {
-            display: block; position: relative; margin: 30px auto;
-            width: 411px; max-width: 95%; background-color: #fff;
-            border-radius: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 411px; max-width: 90%;
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             overflow: hidden;
+            position: relative;
         }
 
-        .container { padding: 0 15px 20px 15px; }
-
+        /* --- Header & Ảnh --- */
         #cover-image {
+            width: 100%; height: 170px;
+            background-image: url('https://i.imgur.com/vHq4R7L.jpg'); /* Ảnh bìa */
             background-position: center; background-size: cover;
-            width: 100%; height: 165px;
         }
 
         #profile-header {
-            display: grid; grid-template-columns: 120px auto;
-            column-gap: 15px; margin-top: -25px;
+            display: flex; padding: 0 20px; margin-top: -35px; gap: 15px;
         }
 
         #avatar-image {
-            background-position: center; background-size: cover;
-            border-radius: 30px; width: 120px; height: 120px;
+            width: 110px; height: 110px;
+            border-radius: 25px;
             border: 4px solid #fff;
+            background-position: center; background-size: cover;
+            /* ĐÃ THAY LINK ẢNH TRỰC TIẾP CỦA BẠN TẠI ĐÂY */
+            background-image: url('https://i.ibb.co/L8v6v6n/avatar.jpg');
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        #name { padding-top: 30px; }
-        .names { font-weight: 600; font-size: 20px; margin: 0; }
-        
+        #name-box { padding-top: 40px; flex: 1; }
+        .names { font-weight: 700; font-size: 19px; margin: 0; color: #333; }
+        .sub-text { font-size: 13px; color: #777; display: block; margin-top: 2px; }
+
+        .skill-group { margin-top: 8px; }
         .skill-item {
-            display: inline-block; font-size: 11px; font-weight: 600;
-            padding: 2px 8px; margin: 5px 2px 0 0;
-            background: rgba(0,0,0,0.05); border-radius: 5px;
+            display: inline-block; font-size: 10px; font-weight: 700;
+            padding: 3px 8px; border-radius: 6px; margin-right: 4px;
+            background: rgba(0,0,0,0.05); text-transform: uppercase;
         }
 
-        #content-body { margin-top: 25px; }
-        .drop-title { font-weight: 600; font-size: 18px; margin-bottom: 15px; }
+        /* --- Danh sách liên kết --- */
+        #content-body { padding: 20px; }
+        .section-title { font-weight: 700; font-size: 16px; margin-bottom: 15px; color: #444; }
 
         .link-item {
-            display: grid; grid-template-columns: 60px auto 70px;
-            align-items: center; height: 70px; background-color: #fafafa;
-            border-radius: 20px; margin-bottom: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: 0.3s;
+            display: flex; align-items: center; padding: 12px;
+            background: #f9f9f9; border-radius: 18px; margin-bottom: 12px;
+            transition: 0.3s; cursor: pointer; text-decoration: none; color: inherit;
+        }
+        .link-item:hover { background: #f0f7ff; transform: translateY(-2px); }
+
+        .icon-thumb {
+            width: 45px; height: 45px; border-radius: 12px;
+            background-size: cover; margin-right: 15px;
         }
 
-        .link-item:hover { background-color: #f0f7ff; transform: translateY(-2px); }
+        .link-info { flex: 1; }
+        .link-info p { margin: 0; font-weight: 600; font-size: 15px; }
+        .link-info span { font-size: 12px; color: #888; }
 
-        .bio-story-thumb {
-            width: 45px; height: 45px; margin: 0 auto;
-            background-size: cover; border-radius: 12px;
-        }
+        .btn-open { font-weight: 800; font-size: 12px; color: #ef9d64; }
 
-        .link-content p { margin: 0; font-weight: 600; font-size: 15px; }
-        .link-content span { font-size: 13px; color: #888; cursor: pointer; }
-
-        .link-btn-chill {
-            font-weight: 700; font-size: 13px; cursor: pointer;
-            text-align: center; color: #ef9d64;
-        }
-
-        /* Snowflake Effect */
-        .snowflake { position: fixed; top: -10%; z-index: 9999; user-select: none; }
-        
+        /* --- Music Popup --- */
         #music-confirm {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.8); display: flex; align-items: center; 
-            justify-content: center; z-index: 100000; backdrop-filter: blur(5px);
+            justify-content: center; z-index: 10000; backdrop-filter: blur(4px);
         }
-        .confirm-box {
-            background: white; padding: 30px; border-radius: 25px;
-            text-align: center; width: 280px;
-        }
+        .confirm-box { background: white; padding: 25px; border-radius: 25px; text-align: center; width: 280px; }
         .btn-group { display: flex; gap: 10px; margin-top: 20px; }
         .confirm-btn { flex: 1; padding: 12px; border: none; border-radius: 12px; cursor: pointer; font-weight: 700; }
         .btn-yes { background: #ef9d64; color: white; }
-        .btn-no { background: #eee; }
+        .btn-no { background: #eee; color: #666; }
 
-        audio { display: none; }
+        /* Tuyết rơi */
+        .snowflake { position: fixed; top: -10%; z-index: 9999; color: #fff; user-select: none; pointer-events: none; }
     </style>
 </head>
-
 <body>
 
     <div id="music-confirm">
         <div class="confirm-box">
-            <p>🎵 Nghe nhạc Chill khi xem Profile Lan Anh nhé?</p>
+            <p style="margin:0; font-weight:700;">🎵 Nghe nhạc Chill khi xem Profile Lan Anh nhé?</p>
             <div class="btn-group">
                 <button class="confirm-btn btn-yes" onclick="startMusic(true)">Nghe luôn</button>
                 <button class="confirm-btn btn-no" onclick="startMusic(false)">Thôi ạ</button>
@@ -122,64 +120,58 @@
 
     <div id="root">
         <div id="main">
-            <div id="cover-image" style="background-image: url('https://i.imgur.com/vHq4R7L.jpg');"></div>
+            <div id="cover-image"></div>
             
-            <div class="container">
-                <header>
-                    <div id="profile-header">
-                        <div id="avatar-image" style="background-image: url('https://i.imgur.com/8pw9fS9.png');"></div>
-                        <div id="name">
-                            <p class="names">𝑵𝒈𝒖𝒚𝒆̂̃𝒏 𝑻𝒉𝒊̣ 𝑳𝒂𝒏 𝑨𝒏𝒉 <i class="fas fa-check-circle" style="color:#2d88ff"></i></p>
-                            <span style="font-size: 13px; color: #666;">Chỉ Bán Hàng Auth</span>
-                            <div id="skills">
-                                <div class="skill-item" style="color:#740A4E;">Hot</div>
-                                <div class="skill-item" style="color:#ff758f;">Auth</div>
-                                <div class="skill-item" style="color:#F27935;">Skincare</div>
-                            </div>
-                        </div>
+            <div id="profile-header">
+                <div id="avatar-image"></div>
+                <div id="name-box">
+                    <p class="names">𝑵𝒈𝒖𝒚𝒆̂̃𝒏 𝑻𝒉𝒊̣ 𝑳𝒂𝒏 𝑨𝒏𝒉 <i class="fas fa-check-circle" style="color:#2d88ff"></i></p>
+                    <span class="sub-text">Chuyên Bán Hàng Auth</span>
+                    <div class="skill-group">
+                        <span class="skill-item" style="color:#ff4d6d;">HOT</span>
+                        <span class="skill-item" style="color:#2d88ff;">AUTH</span>
+                        <span class="skill-item" style="color:#40916c;">SKINCARE</span>
                     </div>
-                </header>
+                </div>
+            </div>
 
-                <div id="content-body">
-                    <p class="drop-title">Thông Tin Liên Hệ</p>
-                    
-                    <div id="link-box">
-                        <div class="link-item" onclick="window.open('https://www.facebook.com/lananh.nguyenthi.92102', '_blank')">
-                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/q8qqsAy.png');"></div>
-                            <div class="link-content">
-                                <p>Facebook</p>
-                                <span>ɴɢᴜʏᴇ̂̃ɴ ᴛʜɪ̣ ʟᴀɴ ᴀɴʜ</span>
-                            </div>
-                            <div class="link-btn-chill">OPEN</div>
-                        </div>
-
-                        <div class="link-item" onclick="window.open('https://www.instagram.com/nguyenananhtu', '_blank')">
-                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/1G4kS7D.png');"></div>
-                            <div class="link-content">
-                                <p>Instagram</p>
-                                <span>lananh.auth</span>
-                            </div>
-                            <div class="link-btn-chill">OPEN</div>
-                        </div>
-
-                        <div class="link-item" onclick="window.open('https://zalo.me/0363665265', '_blank')">
-                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/8eN7qqF.png');"></div>
-                            <div class="link-content">
-                                <p>Zalo</p>
-                                <span>0363.665.265</span>
-                            </div>
-                            <div class="link-btn-chill">OPEN</div>
-                        </div>
-
-                        <div class="link-item">
-                            <div class="bio-story-thumb" style="background-image: url('https://i.imgur.com/k1Qbqxg.png');"></div>
-                            <div class="link-content">
-                                <p>Gmail</p>
-                                <span onclick="geturl('Lananh1610vfu@mail.com')">Lananh1610vfu@mail.com</span>
-                            </div>
-                            <div class="link-btn-chill" style="color: #6a8de4;" onclick="geturl('Lananh1610vfu@mail.com')">COPY</div>
-                        </div>
+            <div id="content-body">
+                <p class="section-title">Thông Tin Liên Hệ</p>
+                
+                <div class="link-item" onclick="window.open('https://www.facebook.com/lananh.nguyenthi.92102', '_blank')">
+                    <div class="icon-thumb" style="background-image: url('https://i.imgur.com/q8qqsAy.png');"></div>
+                    <div class="link-info">
+                        <p>Facebook</p>
+                        <span>ɴɢᴜʏᴇ̂̃ɴ ᴛʜɪ̣ ʟᴀɴ ᴀɴʜ</span>
                     </div>
+                    <div class="btn-open">MỞ</div>
+                </div>
+
+                <div class="link-item" onclick="window.open('https://www.instagram.com/nguyenananhtu', '_blank')">
+                    <div class="icon-thumb" style="background-image: url('https://i.imgur.com/1G4kS7D.png');"></div>
+                    <div class="link-info">
+                        <p>Instagram</p>
+                        <span>lananh.auth</span>
+                    </div>
+                    <div class="btn-open">MỞ</div>
+                </div>
+
+                <div class="link-item" onclick="window.open('https://zalo.me/0363665265', '_blank')">
+                    <div class="icon-thumb" style="background-image: url('https://i.imgur.com/8eN7qqF.png');"></div>
+                    <div class="link-info">
+                        <p>Zalo</p>
+                        <span>Kết bạn ngay</span>
+                    </div>
+                    <div class="btn-open">MỞ</div>
+                </div>
+
+                <div class="link-item" onclick="copyEmail('Lananh1610vfu@mail.com')">
+                    <div class="icon-thumb" style="background-image: url('https://i.imgur.com/k1Qbqxg.png');"></div>
+                    <div class="link-info">
+                        <p>Gmail</p>
+                        <span>Lananh1610vfu@mail.com</span>
+                    </div>
+                    <div class="btn-open" style="color:#6a8de4;">COPY</div>
                 </div>
             </div>
         </div>
@@ -191,49 +183,48 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // Hàm copy
-        function geturl(giatri) {
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val(giatri).select();
-            document.execCommand("copy");
-            $temp.remove();
+        // Hàm Copy Email
+        function copyEmail(email) {
+            const el = document.createElement('textarea');
+            el.value = email;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
             alert("Đã copy địa chỉ Email!");
         }
 
-        // Nhạc
-        var songs = [
+        // Quản lý nhạc
+        const songs = [
             'https://files.catbox.moe/eqqdvx.mp3',
             'https://files.catbox.moe/8g3pyw.mp3',
             'https://files.catbox.moe/dwy88x.mp3'
         ];
-        var audioPlayer = document.getElementById('audioPlayer');
-
-        function changeSong() {
-            var randomIndex = Math.floor(Math.random() * songs.length);
-            audioPlayer.src = songs[randomIndex];
-            audioPlayer.play();
-        }
+        const audioPlayer = document.getElementById('audioPlayer');
 
         function startMusic(play) {
             document.getElementById('music-confirm').style.display = 'none';
-            if (play) changeSong();
+            if (play) {
+                const randomSong = songs[Math.floor(Math.random() * songs.length)];
+                audioPlayer.src = randomSong;
+                audioPlayer.play();
+            }
         }
 
-        // Hiệu ứng tuyết rơi đơn giản
+        // Hiệu ứng tuyết rơi
         function createSnowflake() {
             const snowflake = document.createElement('div');
             snowflake.innerHTML = "❄";
             snowflake.classList.add('snowflake');
             snowflake.style.left = Math.random() * 100 + 'vw';
             snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
             snowflake.style.opacity = Math.random();
-            snowflake.style.color = "#fff";
             document.body.appendChild(snowflake);
             
-            let pos = -10;
+            let pos = -20;
             const timer = setInterval(() => {
-                pos += 2;
+                pos += 1.5;
                 snowflake.style.top = pos + 'px';
                 if (pos > window.innerHeight) {
                     clearInterval(timer);
@@ -241,7 +232,8 @@
                 }
             }, 20);
         }
-        setInterval(createSnowflake, 300);
+        setInterval(createSnowflake, 400);
     </script>
+
 </body>
 </html>
